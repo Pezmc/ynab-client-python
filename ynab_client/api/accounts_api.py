@@ -38,11 +38,11 @@ class AccountsApi(object):
 
         Returns a single account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_account_by_id(budget_id, account_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_account_by_id(budget_id, account_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str account_id: The ID of the Account. (required)
         :return: AccountResponse
@@ -50,7 +50,7 @@ class AccountsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.get_account_by_id_with_http_info(budget_id, account_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_account_by_id_with_http_info(budget_id, account_id, **kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class AccountsApi(object):
 
         Returns a single account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_account_by_id_with_http_info(budget_id, account_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_account_by_id_with_http_info(budget_id, account_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str account_id: The ID of the Account. (required)
         :return: AccountResponse
@@ -74,7 +74,7 @@ class AccountsApi(object):
         """
 
         all_params = ['budget_id', 'account_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class AccountsApi(object):
             files=local_var_files,
             response_type='AccountResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,18 +141,18 @@ class AccountsApi(object):
 
         Returns all accounts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_accounts(budget_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_accounts(budget_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :return: AccountsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.get_accounts_with_http_info(budget_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_accounts_with_http_info(budget_id, **kwargs)  # noqa: E501
@@ -163,11 +163,11 @@ class AccountsApi(object):
 
         Returns all accounts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_accounts_with_http_info(budget_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_accounts_with_http_info(budget_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :return: AccountsResponse
                  If the method is called asynchronously,
@@ -175,7 +175,7 @@ class AccountsApi(object):
         """
 
         all_params = ['budget_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class AccountsApi(object):
             files=local_var_files,
             response_type='AccountsResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

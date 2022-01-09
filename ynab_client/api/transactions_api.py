@@ -38,11 +38,11 @@ class TransactionsApi(object):
 
         Creates multiple transactions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_create_transactions(budget_id, transactions, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.bulk_create_transactions(budget_id, transactions, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param BulkTransactions transactions: The list of Transactions to create. (required)
         :return: BulkResponse
@@ -50,7 +50,7 @@ class TransactionsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.bulk_create_transactions_with_http_info(budget_id, transactions, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_create_transactions_with_http_info(budget_id, transactions, **kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class TransactionsApi(object):
 
         Creates multiple transactions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_create_transactions_with_http_info(budget_id, transactions, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.bulk_create_transactions_with_http_info(budget_id, transactions, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param BulkTransactions transactions: The list of Transactions to create. (required)
         :return: BulkResponse
@@ -74,7 +74,7 @@ class TransactionsApi(object):
         """
 
         all_params = ['budget_id', 'transactions']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class TransactionsApi(object):
             files=local_var_files,
             response_type='BulkResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,11 +141,11 @@ class TransactionsApi(object):
 
         Creates a transaction  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_transaction(budget_id, transaction, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.create_transaction(budget_id, transaction, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param SaveTransactionWrapper transaction: The Transaction to create. (required)
         :return: TransactionResponse
@@ -153,7 +153,7 @@ class TransactionsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.create_transaction_with_http_info(budget_id, transaction, **kwargs)  # noqa: E501
         else:
             (data) = self.create_transaction_with_http_info(budget_id, transaction, **kwargs)  # noqa: E501
@@ -164,11 +164,11 @@ class TransactionsApi(object):
 
         Creates a transaction  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_transaction_with_http_info(budget_id, transaction, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.create_transaction_with_http_info(budget_id, transaction, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param SaveTransactionWrapper transaction: The Transaction to create. (required)
         :return: TransactionResponse
@@ -177,7 +177,7 @@ class TransactionsApi(object):
         """
 
         all_params = ['budget_id', 'transaction']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -233,7 +233,7 @@ class TransactionsApi(object):
             files=local_var_files,
             response_type='TransactionResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -244,11 +244,11 @@ class TransactionsApi(object):
 
         Returns budget transactions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_transactions(budget_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_transactions(budget_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param date since_date: Only return transactions on or after this date.
         :param str type: Only return transactions of a certain type ('uncategorized' and 'unapproved' are currently supported)
@@ -257,7 +257,7 @@ class TransactionsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.get_transactions_with_http_info(budget_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_transactions_with_http_info(budget_id, **kwargs)  # noqa: E501
@@ -268,11 +268,11 @@ class TransactionsApi(object):
 
         Returns budget transactions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_transactions_with_http_info(budget_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_transactions_with_http_info(budget_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param date since_date: Only return transactions on or after this date.
         :param str type: Only return transactions of a certain type ('uncategorized' and 'unapproved' are currently supported)
@@ -282,7 +282,7 @@ class TransactionsApi(object):
         """
 
         all_params = ['budget_id', 'since_date', 'type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -336,7 +336,7 @@ class TransactionsApi(object):
             files=local_var_files,
             response_type='TransactionsResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -347,11 +347,11 @@ class TransactionsApi(object):
 
         Returns all transactions for a specified account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_transactions_by_account(budget_id, account_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_transactions_by_account(budget_id, account_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str account_id: The ID of the Account. (required)
         :param date since_date: Only return transactions on or after this date.
@@ -361,7 +361,7 @@ class TransactionsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.get_transactions_by_account_with_http_info(budget_id, account_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_transactions_by_account_with_http_info(budget_id, account_id, **kwargs)  # noqa: E501
@@ -372,11 +372,11 @@ class TransactionsApi(object):
 
         Returns all transactions for a specified account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_transactions_by_account_with_http_info(budget_id, account_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_transactions_by_account_with_http_info(budget_id, account_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str account_id: The ID of the Account. (required)
         :param date since_date: Only return transactions on or after this date.
@@ -387,7 +387,7 @@ class TransactionsApi(object):
         """
 
         all_params = ['budget_id', 'account_id', 'since_date', 'type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -447,7 +447,7 @@ class TransactionsApi(object):
             files=local_var_files,
             response_type='TransactionsResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -458,11 +458,11 @@ class TransactionsApi(object):
 
         Returns all transactions for a specified category  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_transactions_by_category(budget_id, category_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_transactions_by_category(budget_id, category_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str category_id: The ID of the Category. (required)
         :param date since_date: Only return transactions on or after this date.
@@ -472,7 +472,7 @@ class TransactionsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.get_transactions_by_category_with_http_info(budget_id, category_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_transactions_by_category_with_http_info(budget_id, category_id, **kwargs)  # noqa: E501
@@ -483,11 +483,11 @@ class TransactionsApi(object):
 
         Returns all transactions for a specified category  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_transactions_by_category_with_http_info(budget_id, category_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_transactions_by_category_with_http_info(budget_id, category_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str category_id: The ID of the Category. (required)
         :param date since_date: Only return transactions on or after this date.
@@ -498,7 +498,7 @@ class TransactionsApi(object):
         """
 
         all_params = ['budget_id', 'category_id', 'since_date', 'type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -558,7 +558,7 @@ class TransactionsApi(object):
             files=local_var_files,
             response_type='HybridTransactionsResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -569,11 +569,11 @@ class TransactionsApi(object):
 
         Returns a single transaction  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_transactions_by_id(budget_id, transaction_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_transactions_by_id(budget_id, transaction_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str transaction_id: The ID of the Transaction. (required)
         :return: TransactionResponse
@@ -581,7 +581,7 @@ class TransactionsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.get_transactions_by_id_with_http_info(budget_id, transaction_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_transactions_by_id_with_http_info(budget_id, transaction_id, **kwargs)  # noqa: E501
@@ -592,11 +592,11 @@ class TransactionsApi(object):
 
         Returns a single transaction  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_transactions_by_id_with_http_info(budget_id, transaction_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_transactions_by_id_with_http_info(budget_id, transaction_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str transaction_id: The ID of the Transaction. (required)
         :return: TransactionResponse
@@ -605,7 +605,7 @@ class TransactionsApi(object):
         """
 
         all_params = ['budget_id', 'transaction_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -661,7 +661,7 @@ class TransactionsApi(object):
             files=local_var_files,
             response_type='TransactionResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -672,11 +672,11 @@ class TransactionsApi(object):
 
         Returns all transactions for a specified payee  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_transactions_by_payee(budget_id, payee_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_transactions_by_payee(budget_id, payee_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str payee_id: The ID of the Payee. (required)
         :param date since_date: Only return transactions on or after this date.
@@ -686,7 +686,7 @@ class TransactionsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.get_transactions_by_payee_with_http_info(budget_id, payee_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_transactions_by_payee_with_http_info(budget_id, payee_id, **kwargs)  # noqa: E501
@@ -697,11 +697,11 @@ class TransactionsApi(object):
 
         Returns all transactions for a specified payee  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_transactions_by_payee_with_http_info(budget_id, payee_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_transactions_by_payee_with_http_info(budget_id, payee_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str payee_id: The ID of the Payee. (required)
         :param date since_date: Only return transactions on or after this date.
@@ -712,7 +712,7 @@ class TransactionsApi(object):
         """
 
         all_params = ['budget_id', 'payee_id', 'since_date', 'type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -772,7 +772,7 @@ class TransactionsApi(object):
             files=local_var_files,
             response_type='HybridTransactionsResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -783,11 +783,11 @@ class TransactionsApi(object):
 
         Updates a transaction  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_transaction(budget_id, transaction_id, transaction, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.update_transaction(budget_id, transaction_id, transaction, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str transaction_id: The ID of the Transaction. (required)
         :param SaveTransactionWrapper transaction: The Transaction to update. (required)
@@ -796,7 +796,7 @@ class TransactionsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.update_transaction_with_http_info(budget_id, transaction_id, transaction, **kwargs)  # noqa: E501
         else:
             (data) = self.update_transaction_with_http_info(budget_id, transaction_id, transaction, **kwargs)  # noqa: E501
@@ -807,11 +807,11 @@ class TransactionsApi(object):
 
         Updates a transaction  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_transaction_with_http_info(budget_id, transaction_id, transaction, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.update_transaction_with_http_info(budget_id, transaction_id, transaction, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str transaction_id: The ID of the Transaction. (required)
         :param SaveTransactionWrapper transaction: The Transaction to update. (required)
@@ -821,7 +821,7 @@ class TransactionsApi(object):
         """
 
         all_params = ['budget_id', 'transaction_id', 'transaction']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -883,7 +883,7 @@ class TransactionsApi(object):
             files=local_var_files,
             response_type='TransactionResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

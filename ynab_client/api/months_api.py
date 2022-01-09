@@ -38,11 +38,11 @@ class MonthsApi(object):
 
         Returns a single budget month  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_budget_month(budget_id, month, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_budget_month(budget_id, month, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param date month: The Budget Month.  \"current\" can also be used to specify the current calendar month (UTC). (required)
         :return: MonthDetailResponse
@@ -50,7 +50,7 @@ class MonthsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.get_budget_month_with_http_info(budget_id, month, **kwargs)  # noqa: E501
         else:
             (data) = self.get_budget_month_with_http_info(budget_id, month, **kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class MonthsApi(object):
 
         Returns a single budget month  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_budget_month_with_http_info(budget_id, month, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_budget_month_with_http_info(budget_id, month, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param date month: The Budget Month.  \"current\" can also be used to specify the current calendar month (UTC). (required)
         :return: MonthDetailResponse
@@ -74,7 +74,7 @@ class MonthsApi(object):
         """
 
         all_params = ['budget_id', 'month']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class MonthsApi(object):
             files=local_var_files,
             response_type='MonthDetailResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,18 +141,18 @@ class MonthsApi(object):
 
         Returns all budget months  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_budget_months(budget_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_budget_months(budget_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :return: MonthSummariesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.get_budget_months_with_http_info(budget_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_budget_months_with_http_info(budget_id, **kwargs)  # noqa: E501
@@ -163,11 +163,11 @@ class MonthsApi(object):
 
         Returns all budget months  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_budget_months_with_http_info(budget_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_budget_months_with_http_info(budget_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :return: MonthSummariesResponse
                  If the method is called asynchronously,
@@ -175,7 +175,7 @@ class MonthsApi(object):
         """
 
         all_params = ['budget_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class MonthsApi(object):
             files=local_var_files,
             response_type='MonthSummariesResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

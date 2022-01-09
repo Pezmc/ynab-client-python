@@ -38,11 +38,11 @@ class PayeesApi(object):
 
         Returns single payee  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_payee_by_id(budget_id, payee_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_payee_by_id(budget_id, payee_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str payee_id: The ID of the Payee. (required)
         :return: PayeeResponse
@@ -50,7 +50,7 @@ class PayeesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.get_payee_by_id_with_http_info(budget_id, payee_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_payee_by_id_with_http_info(budget_id, payee_id, **kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class PayeesApi(object):
 
         Returns single payee  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_payee_by_id_with_http_info(budget_id, payee_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_payee_by_id_with_http_info(budget_id, payee_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :param str payee_id: The ID of the Payee. (required)
         :return: PayeeResponse
@@ -74,7 +74,7 @@ class PayeesApi(object):
         """
 
         all_params = ['budget_id', 'payee_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class PayeesApi(object):
             files=local_var_files,
             response_type='PayeeResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,18 +141,18 @@ class PayeesApi(object):
 
         Returns all payees  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_payees(budget_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_payees(budget_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :return: PayeesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('_async'):
             return self.get_payees_with_http_info(budget_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_payees_with_http_info(budget_id, **kwargs)  # noqa: E501
@@ -163,11 +163,11 @@ class PayeesApi(object):
 
         Returns all payees  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_payees_with_http_info(budget_id, async=True)
+        asynchronous HTTP request, please pass _async=True
+        >>> thread = api.get_payees_with_http_info(budget_id, _async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param _async bool
         :param str budget_id: The ID of the Budget. (required)
         :return: PayeesResponse
                  If the method is called asynchronously,
@@ -175,7 +175,7 @@ class PayeesApi(object):
         """
 
         all_params = ['budget_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class PayeesApi(object):
             files=local_var_files,
             response_type='PayeesResponse',  # noqa: E501
             auth_settings=auth_settings,
-            is_async=params.get('is_async'),
+            _async=params.get('_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
